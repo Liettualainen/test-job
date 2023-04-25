@@ -1,16 +1,36 @@
-export const App = () => {
-  return (
-    <div
+import React, { Component } from 'react';
+
+
+import UserCardGallery from './UserCardGallery';
+
+
+
+
+export class App extends Component {
+
+  render() { 
+    
+   return (
+     <div className='App'
+       
       style={{
-        height: '100vh',
+            height: '100vh',
         display: 'flex',
-        justifyContent: 'center',
+          padingTop: '20px',
+         flexDirection: 'column',
+        // justifyContent: 'center',
         alignItems: 'center',
         fontSize: 40,
         color: '#010101'
       }}
-    >
-      test-job
+     >
+       
+       The world's most famous composers
+
+       <UserCardGallery />
+
+    
     </div>
   );
+}
 };
